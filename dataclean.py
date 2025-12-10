@@ -19,6 +19,7 @@ def clean_text(text):
     return text
 
 df['text_clean'] = df['text'].apply(clean_text)
+df['text_clean'] = df['text_clean'].fillna("nothing")
 
 # -----------------------------
 # keyword & location 缺失处理
